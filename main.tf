@@ -19,6 +19,7 @@ terraform {
 resource "aws_instance" "this" {
   ami           = "ami-073e64e4c237c08ad" # us-west-1
   instance_type = "t2.micro"
+  key_name               = "awskeypair"
   tags = {
     Name = "Terraform-Instance"
   }
